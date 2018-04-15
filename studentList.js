@@ -4,28 +4,41 @@ const studentList = (studentProfiles) => {
     let studentList = document.querySelector('#postStudents');
     studentProfiles.forEach(student => {
         let card = document.createElement('span'),
+            cardContent = document.createElement('span'),
             imageEl = document.createElement('img'),
-            details = [],
+            nameEl = document.createElement('p'),
+            gitEl = document.createElement('p'),
+            repoEl = document.createElement('p'),
+            divider = document.createElement('hr'),
+            allEl = [],
             name = student.name,
             git = student.githubHandle,
-            image = student.img;
-            totalRepos = student.repositories.length;
+            image = student.img,
+            repo = student.repositories.length;
+        allEl.push(imageEl, nameEl, gitEl, repoEl);
+        divider.classList.add('student--card-divider')
 
-        card.classList.add('student--card');
-        details.push(name, git, totalRepos);
+        cardContent.classList.add('student--card');
+
         imageEl.src = image;
-        imageEl.classList.add('student--card-image')
-        card.appendChild(imageEl);
+        imageEl.classList.add('student--card-image');
 
-        details.forEach(detail => {
-            textNode = document.createElement('p');
-            textNode.textContent += detail;
-            card.appendChild(textNode);
-            studentList.appendChild(card)
+        nameEl.textContent = name;
+        nameEl.classList.add('student--card-name');
+
+        gitEl.textContent = git;
+        gitEl.classList.add('student--card-git');
+
+        repoEl.textContent = repo;
+        repoEl.classList.add('student--card-repo');
+
+        allEl.forEach(el => {
+            cardContent.appendChild(el);
         })
 
-        console.log(card)
-
+        card.appendChild(cardContent)
+        card.appendChild(divider)
+        studentList.appendChild(card)
 
 
     })

@@ -99,6 +99,22 @@ nav > span > img {
     padding: 0 20px 0 20px;
 }
 
+.card--subheader {
+    display: flex;
+    background: rgb(224, 224, 224);
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    padding: 0 20px 0 20px;
+}
+
+.card--subheader-title {
+    font-weight: 800;
+    font-size: 12px;
+    color: var(--primaryColor);
+    text-align: left;
+}
+
 .card--header-title {
     font-weight: 600;
     color: var(--primaryColor);
@@ -133,7 +149,7 @@ select:active, select:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 50px 0 110px;
+    padding: 0px 80px 0 150px;
     border-bottom: 1px solid var(--accentGray);
 }
 
@@ -210,7 +226,7 @@ select:active, select:focus {
     display: flex;
     justify-content: space-between;
     background-color: var(--backgroundColor);
-    padding: 40px 50px 0 110px;
+    padding: 40px 80px 0 140px;
     height: 100%;
 }
 
@@ -260,13 +276,27 @@ select:active, select:focus {
 
 .student--card{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 2px 10px 2px 10px;
+    margin: 2px 15px 2px 15px;
 }
 
 .student--card-image {
     width: 30px;
     height: 30px;
     border-radius: 100px;
+}
+
+.student--card-name {
+    margin: 0;
+    font-weight: 800;
+}
+
+.student--card-git, .student--card-repo {
+    font-weight: 400;
+}
+
+.student--card-divider {
+    border: 1px solid var(--backgroundColor);
+    margin: 0;
 }
