@@ -102,18 +102,35 @@ nav > span > img {
 .card--subheader {
     display: flex;
     background: rgb(224, 224, 224);
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     height: 40px;
-    padding: 0 20px 0 20px;
-}
-
-.card--subheader-title {
+    padding: 0 20px 0 35px;
     font-weight: 800;
     font-size: 12px;
     color: var(--primaryColor);
     text-align: left;
 }
+
+.card--subheader-img {
+    margin-right: 30px;
+}
+
+.card--subheader-student {
+    text-align: left;
+    width: 50%;
+}
+
+.card--subheader-repo {
+    text-align: center;
+    width: 30%;
+}
+
+.card--subheader-streak {
+    text-align: center;
+    width: 30%;
+}
+
 
 .card--header-title {
     font-weight: 600;
@@ -276,23 +293,35 @@ select:active, select:focus {
 
 .student--card{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     margin: 2px 15px 2px 15px;
+    padding-left: 20px;
 }
 
 .student--card-image {
-    width: 30px;
     height: 30px;
     border-radius: 100px;
+    margin-right: 30px;
 }
 
 .student--card-name {
     margin: 0;
     font-weight: 800;
+    width: 55%;
+    margin-right: 20px;
 }
 
-.student--card-git, .student--card-repo {
+.student--card-repo {
+    text-align: center;
+    font-weight: 400;
+    width: 30%;
+    margin-right: 40px;
+}
+
+.student--card-streak {
+    text-align: center;
+    width: 30%;
     font-weight: 400;
 }
 

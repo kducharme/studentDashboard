@@ -11,9 +11,10 @@ $.ajax({
 //hit the github API to get all repos for each student
 const getStudentRepos = (students) => {
     let studentRepos = []
+
     students.forEach(student => {
         $.ajax({
-            url: `https://spyproxy.bangazon.com/student/commit/https://api.github.com/users/${student.githubHandle}/repos`,
+            url: `https://spyproxy.bangazon.com/student/commit/https://api.github.com/users/${student.githubHandle}/repos`, 
         }).then(res => {
             studentRepos.push(res)
             return studentRepos
@@ -23,10 +24,8 @@ const getStudentRepos = (students) => {
     });
 }
 
-
 //build a student object with the structure we agreed upon in planning
 const studentDataFactory = (student, studentRepos) => {
-    let studentProfiles = [];
     let studentData = Object.create(null, {
         name: {
             value: student.name
@@ -44,13 +43,16 @@ const studentDataFactory = (student, studentRepos) => {
             value: null
         },
         repositories: {
-            value: parseStudentRepos(studentRepos)
+            value: Math.floor(Math.random() * 4)
+                
+            },
+        streak: {
+            value: Math.floor(Math.random() * 4)
+                
+            }
+        })
 
-        }
-    })
-
-    studentProfiles.push(studentData)
-    studentList(studentProfiles); // Passes the array of objects to create & post to DOM
+        studentList(studentData); // Passes the array of objects to create & post to DOM
     getRepoLangAmount(studentData)
 }
 
@@ -68,7 +70,7 @@ const parseStudentRepos = (studentRepos) => {
 }
 
 
-//loop over each repo to get the amount of JS/CSS/HTML used in each repo and store it within the specific repo object on the student obj
+// //loop over each repo to get the amount of JS/CSS/HTML used in each repo and store it within the specific repo object on the student obj
 const getRepoLangAmount = (student) => {
     let repos = student['repositories']
 

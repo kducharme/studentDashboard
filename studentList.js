@@ -1,21 +1,25 @@
 //Generates the students for the list widget
 
-const studentList = (studentProfiles) => {
-    let studentList = document.querySelector('#postStudents');
-    studentProfiles.forEach(student => {
+const studentList = (studentData) => {
+    let studentList = document.querySelector('#postStudents'),
+        allStudents = []
+
+    allStudents.push(studentData);
+    allStudents.forEach(student => {
         let card = document.createElement('span'),
             cardContent = document.createElement('span'),
             imageEl = document.createElement('img'),
             nameEl = document.createElement('p'),
-            gitEl = document.createElement('p'),
             repoEl = document.createElement('p'),
+            streakEl = document.createElement('p'),
             divider = document.createElement('hr'),
             allEl = [],
             name = student.name,
-            git = student.githubHandle,
+            streak = student.streak,
             image = student.img,
-            repo = student.repositories.length;
-        allEl.push(imageEl, nameEl, gitEl, repoEl);
+            repo = student.repositories
+
+        allEl.push(imageEl, nameEl, repoEl, streakEl);
         divider.classList.add('student--card-divider')
 
         cardContent.classList.add('student--card');
@@ -26,11 +30,12 @@ const studentList = (studentProfiles) => {
         nameEl.textContent = name;
         nameEl.classList.add('student--card-name');
 
-        gitEl.textContent = git;
-        gitEl.classList.add('student--card-git');
+        streakEl.textContent = streak;
+        streakEl.classList.add('student--card-streak');
 
         repoEl.textContent = repo;
         repoEl.classList.add('student--card-repo');
+
 
         allEl.forEach(el => {
             cardContent.appendChild(el);
