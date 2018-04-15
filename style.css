@@ -15,7 +15,7 @@ body {
     display: flex;
 }
 
-h1, h2, h3, h4, h5, p, a {
+h1, h2, h3, h4, h5, p, a, select, input, button {
     color: var(--primaryColor);
     font-family: var(--primaryFont);
 }
@@ -60,6 +60,24 @@ nav > span > img {
     margin: 0 0 40px 0;
 }
 
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
 /* Primary body content */
 
 .content {
@@ -69,10 +87,45 @@ nav > span > img {
 }
 
 .card {
-    /* box-shadow: 0 1px 8px 0 rgba(0,0,0,0.05); */
     background-color: white;
     border-radius: 3px;
 }
+
+.card--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    padding: 0 20px 0 20px;
+}
+
+.card--header-title {
+    font-weight: 600;
+    color: var(--primaryColor);
+}
+
+.card--header-action {
+    height: 36px;
+    width: 150px;
+    border: 1px solid var(--accentGray);
+    background-color: white;
+    border-radius: 4px;
+}
+
+select:active, select:focus {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    outline: none;
+    border: 1px solid var(--primaryColor);
+}
+
+.card > hr {
+    border: 1px solid var(--backgroundColor);
+    margin: 0;
+}
+
 
 .content--header {
     height: 100px;
@@ -97,9 +150,10 @@ nav > span > img {
 
 .content--header-title > button {
     height: 40px;
+    font-size: 13px;
     font-weight: 800px;
     padding: 5px 15px 5px 15px;
-    background-color: var(--primaryColor);
+    background-color: #D66853;
     border: none;
     border-radius: 3px;
     color: white;
@@ -141,7 +195,7 @@ nav > span > img {
 }
 
 .filter {
-    color: var(--secondaryColor);
+    color: var(--primaryColor);
     line-height: 1.6;
     padding: 0;
     font-weight: 800;
