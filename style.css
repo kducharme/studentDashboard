@@ -68,7 +68,7 @@ nav > span > img {
 .content {
     display: flex;
     flex-direction: column;
-    padding: 30px 80px 0 140px;
+    padding: 40px 80px 0 140px;
     width: 100%;
 }
 
@@ -76,6 +76,7 @@ nav > span > img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 0 50px 0;
 }
 
 .content--header-title {
@@ -131,3 +132,36 @@ nav > span > img {
 }
 
 /* Content body styling */
+
+.content--body {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.content--body-left {
+    display: flex;
+    flex: 1;
+    margin-right: 15px;
+}
+
+.content--body-left > span{
+    border: 1px solid var(--accentGray);
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+}
+
+.content--body-right {
+    display: flex;
+    flex: 1;
+    margin-left: 15px;
+    flex-direction: column;
+}
+
+.one, .two, .three {
+    border: 1px solid var(--accentGray);
+    background-color: white;
+    height: 300px;
+    margin-bottom: 30px;
+}
