@@ -1,0 +1,133 @@
+:root {
+    --primaryFont: 'lato';
+    --secondaryFont: 'merriweather';
+
+    --primaryColor: #343849;
+    --secondaryColor: #858892;
+    --accentColor: #F47020;
+
+    --backgroundColor: rgb(238, 238, 238);
+    --accentGray: rgb(216, 216, 216);
+}
+
+body {
+    margin: 0;
+    background-color: var(--backgroundColor);
+    display: flex;
+}
+
+h1, h2, h3, h4, h5, p, a {
+    color: var(--primaryColor);
+    font-family: var(--primaryFont);
+}
+
+/* Nav styling */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+    height: 100vh;
+    padding: 30px 0 0 0;
+    background-color: white;
+    border-right: 1px solid var(--accentGray);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+nav > span > img {
+    width: 30px;
+    margin: 0 0 50px 0;
+}
+
+
+.material-icons {
+    color: var(--primaryColor);
+    font-size: 24px;
+    margin: 0 0 40px 0;
+}
+
+.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    border-top: 1px solid var(--accentGray);
+    border-bottom: 1px solid var(--accentGray);
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+/* Primary body content */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 80px 0 140px;
+    width: 100%;
+}
+
+.content--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content--header-title {
+    display: flex;
+    align-items: center;
+}
+
+.content--header-title > p {
+    font-size: 20px;
+    font-weight: 800;
+    padding-right: 20px;
+}
+
+.content--header-title > button {
+    height: 40px;
+    font-weight: 800px;
+    padding: 5px 15px 5px 15px;
+    background-color: var(--primaryColor);
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+
+.content--header-filters {
+    display: flex;
+    align-items: center;
+}
+
+.content--header-filters > input {
+    height: 40px;
+    width: 280px;
+    border: 1px solid var(--accentGray);
+    border-radius: 4px;
+    padding-left: 15px;
+}
+
+.content--header-filters > .button--filter {
+    height: 43px;
+    background-color: white;
+    border: 1px solid var(--accentGray);
+    border-radius: 3px;
+    margin: 0 10px 0 0;
+}
+
+.filter {
+    color: var(--secondaryColor);
+    line-height: 1.6;
+    padding: 0;
+    font-weight: 800;
+    font-size: 25px;
+    margin: 0;
+    width: 35px;
+}
+
+/* Content body styling */

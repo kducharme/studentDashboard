@@ -1,27 +1,23 @@
 
-const repoDB = {};
-const userDB = {};
-
+const studentDatabase = {};
 
 $.ajax({
-    url: "c25.json", 
-    success: function(result){
-        getStudentRepos(result)
+    url: "c25.json",
+    success: function (students) {
+        getStudentData(students)
     }
 });
 
-const getStudentRepos = (students) => {
-    let studentRepos = []
-
+const getStudentData = (students) => {
     students.forEach(student => {
         $.ajax({
-            url: `https://spyproxy.bangazon.com/student/commit/https://api.github.com/users/${student.githubHandle}/repos`, 
+            url: `https://spyproxy.bangazon.com/student/commit/https://api.github.com/users/${student.githubHandle}/repos`,
         }).then(res => {
-            studentRepos.push(res)
-            return studentRepos
+            studentDatabase.students.push(res)
+            return studentDatabase
         }).then(studentRepos => {
-            studentRepos.forEach(studentsRepos => {
-                getRepoLangAmount(studentRepos)
+            studentRepos.forEach(student => {
+                getRepoLangAmount(student)
             })
         })
     });
@@ -31,12 +27,24 @@ let getRepoLangAmount = (repos) => {
     let allLang = []
     repos[0].forEach(repo => {
         $.ajax({
-            url: `https://spyproxy.bangazon.com/student/commit/https://api.github.com/repos/${repo.owner.login}/${repo.name}/languages` 
+            url: `https://spyproxy.bangazon.com/student/commit/https://api.github.com/repos/${repo.owner.login}/${repo.name}/languages`
         }).then(res => {
             allLang.push(res)
             return allLang
         }).then(allLang => {
-            console.log(allLang)
         })
     })
 }
+
+const saveToDatabase = (objectName, users) => {
+    const stringifiedDB = JSON.stringify(users);
+    localStorage.setItem(objectName, stringifiedDB);
+}
+
+const loadDatabase = () => {
+    const databaseString = localStorage.getItem('students');
+    let parsedData = JSON.parse(databaseString)
+    return parsedData;
+}
+
+saveToDatabase('students', studentDatabase);

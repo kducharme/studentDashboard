@@ -2,24 +2,54 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>NSS Student Tracker</title>
+    <meta charset="utf-8">
+    <title>NSS Student Tracker</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='style.css' rel='stylesheet'>
 </head>
 
 <body>
-  <nav>
-    <div class="class-buttons" id="classBtn">
-      <button id="c__25">Cohort 25</button>
+    <nav>
+        <span class='nav--logo'>
+            <img src='img/nss.png'>
+        </span>
+        <i class="material-icons active">home</i>
+        <i class="material-icons">person</i>
+        <i class="material-icons">group_work</i>
+        <i class="material-icons">settings</i>
+    </nav>
+
+    <div class='content'>
+        <div class='content--header'>
+            <span class='content--header-title'>
+                <p>NSS Dashboard</p>
+                <button id='refreshData' class='button--refresh'>Refresh data</button>
+            </span>
+            <span class='content--header-filters'>
+                <button id='filterData' class='button--filter'>
+                    <i class="material-icons filter">filter_list</i>
+                </button>
+                <input id='searchData' placeholder='Search students'>
+            </span>
+        </div>
+
+        <div class='content--body'>
+            <div class='content--body-left'>
+                <span></span>
+            </div>
+            
+            <div class='content--body-right'>
+            
+            </div>
+
+        </div>
+
     </div>
-  </nav>
 
-  <div id="output">
-  </div>
+    <footer></footer>
 
-  <footer></footer>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <script src='app.js'></script>
     <script src='data.js'></script>
     <!-- <script src='data.js'></script> -->
