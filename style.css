@@ -99,6 +99,39 @@ nav > span > img {
     padding: 0 20px 0 20px;
 }
 
+.card--subheader {
+    display: flex;
+    background: rgb(224, 224, 224);
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+    padding: 0 20px 0 35px;
+    font-weight: 800;
+    font-size: 12px;
+    color: var(--primaryColor);
+    text-align: left;
+}
+
+.card--subheader-img {
+    margin-right: 30px;
+}
+
+.card--subheader-student {
+    text-align: left;
+    width: 50%;
+}
+
+.card--subheader-repo {
+    text-align: center;
+    width: 30%;
+}
+
+.card--subheader-streak {
+    text-align: center;
+    width: 30%;
+}
+
+
 .card--header-title {
     font-weight: 600;
     color: var(--primaryColor);
@@ -133,7 +166,7 @@ select:active, select:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 50px 0 110px;
+    padding: 0px 80px 0 150px;
     border-bottom: 1px solid var(--accentGray);
 }
 
@@ -210,7 +243,7 @@ select:active, select:focus {
     display: flex;
     justify-content: space-between;
     background-color: var(--backgroundColor);
-    padding: 40px 50px 0 110px;
+    padding: 40px 80px 0 140px;
     height: 100%;
 }
 
@@ -254,4 +287,45 @@ select:active, select:focus {
 
 .four{
     margin-bottom: 30px;
+}
+
+/* Student widget style */
+
+.student--card{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2px 15px 2px 15px;
+    padding-left: 20px;
+}
+
+.student--card-image {
+    height: 30px;
+    border-radius: 100px;
+    margin-right: 30px;
+}
+
+.student--card-name {
+    margin: 0;
+    font-weight: 800;
+    width: 55%;
+    margin-right: 20px;
+}
+
+.student--card-repo {
+    text-align: center;
+    font-weight: 400;
+    width: 30%;
+    margin-right: 40px;
+}
+
+.student--card-streak {
+    text-align: center;
+    width: 30%;
+    font-weight: 400;
+}
+
+.student--card-divider {
+    border: 1px solid var(--backgroundColor);
+    margin: 0;
 }
