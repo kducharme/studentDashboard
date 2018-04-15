@@ -52,18 +52,30 @@
             </div>
 
             <div class='content--body-right'>
+
+                <span class='card three'>
+                    <span class='card--header'>
+                        <p class='card--header-title'>Total commits per day</p>
+                    </span>
+                    <hr>
+                    <canvas id='lineChart'> </canvas>
+                </span>
+
+                <span class='card four'>
+                    <span class='card--header'>
+                        <p class='card--header-title'>Commits (time of day)</p>
+                    </span>
+                    <hr>
+                    <canvas id='scatterChart'> </canvas>
+                </span>
+
                 <span class='right--row'>
                     <span class='card one'></span>
                     <span class='card two'></span>
-
                 </span>
-                <span class='card three'></span>
-                <span class='card four'></span>
 
             </div>
-
         </div>
-
     </div>
 
     <footer></footer>
@@ -72,7 +84,8 @@
         crossorigin="anonymous"></script>
     <script src='app.js'></script>
     <script src='data.js'></script>
-    <!-- <script src='data.js'></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script src='chart.js'></script>
 </body>
 
 </html>

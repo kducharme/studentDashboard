@@ -215,6 +215,7 @@ select:active, select:focus {
 }
 
 .content--body-left {
+    height: 100%;
     display: flex;
     flex: 1;
     margin-right: 15px;
@@ -247,7 +248,10 @@ select:active, select:focus {
     margin-right: 30px;
 }
 
-.three, .four {
-    height: 250px;
+.three{
+    margin-bottom: 30px;
+}
+
+.four{
     margin-bottom: 30px;
 }
