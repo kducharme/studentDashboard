@@ -255,3 +255,18 @@ select:active, select:focus {
 .four{
     margin-bottom: 30px;
 }
+
+/* Student widget style */
+
+.student--card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 10px 2px 10px;
+}
+
+.student--card-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+}

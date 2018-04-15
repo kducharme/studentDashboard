@@ -23,7 +23,7 @@
     <div class='content'>
         <div class='content--header'>
             <span class='content--header-title'>
-                <p>NSS Dashboard</p>
+                <p>Cohort 25 Dashboard</p>
                 <button id='refreshData' class='button--refresh'>Refresh data</button>
             </span>
             <span class='content--header-filters'>
@@ -39,15 +39,10 @@
                 <span class='card'>
                     <span class='card--header'>
                         <p class='card--header-title'>Student list</p>
-                        <select class='card--header-action'>
-                            <option disabled selected value="volvo"> Select cohort</option>
-                            <option value="c23">23</option>
-                            <option value="c24">24</option>
-                            <option value="c25">25</option>
-                            <option value="c26">26</option>
-                        </select>
+                            <!-- Add search later -->
                     </span>
                     <hr>
+                    <div id='postStudents'></div>
                 </span>
             </div>
 
@@ -86,6 +81,7 @@
     <script src='data.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <script src='chart.js'></script>
+    <script src='studentList.js'></script>
 </body>
 
 </html>
