@@ -36,36 +36,24 @@ let lineChart = new Chart(lineChartOne, {
 });
 
 let scatterChart = new Chart(scatterChartOne, {
-    type: 'scatter',
+    type: 'bar',
     data: {
-        datasets: [{
-            label: ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'],
-            data: [
-                { x: 9, y: 50 }, 
-                { x: 0, y: 10 },
-                { x: 0, y: 10 },
-                { x: 0, y: 10 },
-                { x: 0, y: 10 },
-                { x: 0, y: 10 },
-                { x: 0, y: 10 },
-        ],
-            backgroundColor: gradientStroke,
-        }]
+        labels: ['1-5am', '5-9am', '9am-12pm', '12-5pm', '5-8pm', '9pm-12am'],
+        datasets: [
+            {
+                backgroundColor: ['#404E7C', '#566494', '#6373A6', '#8190C0', '#919ECB', '#B0BEEC'],
+                data: [92, 204, 321, 482, 351, 261]
+            }
+        ]
     },
     options: {
         layout: {
             padding: {
                 left: 30,
                 right: 40,
-                top: 40,
+                top: 30,
                 bottom: 30
             }
-        },
-        scales: {
-            xAxes: [{
-                type: 'linear',
-                position: 'bottom'
-            }]
         },
         legend: {
             display: false
