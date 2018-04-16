@@ -67,7 +67,7 @@ let pieChart = new Chart(pieChartOne, {
         labels: ['JavaScript', 'HTML', 'CSS'],
         datasets: [
             {
-                backgroundColor: ['#404E7C', '#566494', '#6373A6'],
+                backgroundColor: ['#404E7C', '#C6D3FD', '#6373A6'],
                 data: [120, 180, 95]
             }
         ]

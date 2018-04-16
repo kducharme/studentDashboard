@@ -2,6 +2,7 @@
 
 const studentList = (studentData) => {
     let studentList = document.querySelector('#postStudents'),
+        fragment = document.createDocumentFragment(),
         allStudents = []
 
     allStudents.push(studentData);
@@ -20,6 +21,7 @@ const studentList = (studentData) => {
             repo = student.repositories
 
         allEl.push(imageEl, nameEl, repoEl, streakEl);
+
         divider.classList.add('student--card-divider')
 
         cardContent.classList.add('student--card');
@@ -41,9 +43,11 @@ const studentList = (studentData) => {
             cardContent.appendChild(el);
         })
 
-        card.appendChild(cardContent)
-        card.appendChild(divider)
-        studentList.appendChild(card)
+        fragment.appendChild(card)
+        fragment.appendChild(cardContent)
+        fragment.appendChild(divider)
+
+        studentList.appendChild(fragment)
 
 
     })
