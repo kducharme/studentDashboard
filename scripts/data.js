@@ -5,6 +5,7 @@ $.ajax({
     url: "c25.json",
     success: result => {
         getStudentRepos(result)
+        getStudentProfiles(result)
     }
 });
 
@@ -22,7 +23,23 @@ const getStudentRepos = (students) => {
             studentDataFactory(student, studentRepos)
         })
     });
+    repoChart(studentRepos)
 }
+
+//hit the github API to get all student profiles
+// const getStudentProfiles = (students) => {
+//     let studentProfiles = []
+
+//     students.forEach(student => {
+//         $.ajax({
+//             url: `https://spyproxy.bangazon.com/student/commit/https://api.github.com/users/${student.githubHandle}/`, 
+//         }).then(res => {
+//             studentProfiles.push(res)
+//         })
+//     });
+//     console.log(studentProfiles)
+//     // repoChart(studentRepos)
+// }
 
 //build a student object with the structure we agreed upon in planning
 const studentDataFactory = (student, studentRepos) => {

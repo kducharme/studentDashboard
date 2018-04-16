@@ -18,7 +18,8 @@ const studentList = (studentData) => {
             name = student.name,
             streak = student.streak,
             image = student.img,
-            repo = student.repositories
+            repo = student.repositories;
+        
 
         allEl.push(imageEl, nameEl, repoEl, streakEl);
 
@@ -48,7 +49,6 @@ const studentList = (studentData) => {
         fragment.appendChild(divider)
 
         studentList.appendChild(fragment)
-
 
     })
 }

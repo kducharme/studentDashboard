@@ -87,7 +87,8 @@ let pieChart = new Chart(pieChartOne, {
     }
 })
 
-const repoChart = () => {
+const repoChart = (studentRepos) => {
+
     const repoTotal = 542;
     const avgData = Math.floor(repoTotal / 30);
     const repoEl = document.createElement('p');
@@ -101,9 +102,5 @@ const repoChart = () => {
 
     totalRepos.appendChild(repoEl)
     avgRepos.appendChild(avgEl)
-
-
 }
-
-repoChart()
 
