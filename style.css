@@ -6,7 +6,7 @@
 
     --primaryColor: #11151C;
     --secondaryColor: #858892;
-    --accentColor: #F47020;
+    --accentColor: #EC4E20;
 
     --backgroundColor: rgb(241, 241, 241);
     --accentGray: rgb(216, 216, 216);
@@ -169,7 +169,7 @@ select:active, select:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 80px 0 150px;
+    padding: 0px 100px 0 170px;
     border-bottom: 1px solid var(--accentGray);
 }
 
@@ -246,7 +246,7 @@ select:active, select:focus {
     display: flex;
     justify-content: space-between;
     background-color: var(--backgroundColor);
-    padding: 40px 80px 0 140px;
+    padding: 40px 100px 0 170px;
     height: 100%;
 }
 
@@ -275,7 +275,7 @@ select:active, select:focus {
 }
 
 .one, .two {
-    width: 50%;;
+    width: 50%;
     margin-bottom: 30px;
 }
 

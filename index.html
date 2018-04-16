@@ -6,6 +6,7 @@
     <title>NSS Dashboard</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='style.css' rel='stylesheet'>
+    <link href='modal.css' rel='stylesheet'>
     <link rel="shortcut icon" type="image/png" href="img/nss.png" />
 </head>
 
@@ -84,28 +85,44 @@
                     </span>
                 </span>
 
-                    <span class='card four'>
-                        <span class='card--header'>
-                            <p class='card--header-title'>Commits (time of day)</p>
-                        </span>
-                        <hr>
-                        <canvas id='scatterChart'> </canvas>
+                <span class='card four'>
+                    <span class='card--header'>
+                        <p class='card--header-title'>Commits (time of day)</p>
                     </span>
+                    <hr>
+                    <canvas id='scatterChart'> </canvas>
+                </span>
+            </div>
 
+        </div>
+
+        <!-- Modal -->
+        <div id='contact-modal' class='modal hide'>
+            <div class='modal-content' id='content'>
+                <span class='modal--close' id='closeModal'>&times;</span>
+                <div class='modal--body'>
+                    <p class='modal--body-title' id='modal-title'>Filter by student.</p>
+                    <p class='modal--body-p' id='modal-body'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua.</p>
+                    <span class='details--info' id='form'>
+
+                    </span>
+                </div>
 
             </div>
+
         </div>
-    </div>
 
-    <footer></footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-    <script src='app.js'></script>
-    <script src='data.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-    <script src='chart.js'></script>
-    <script src='studentList.js'></script>
+
+        <footer></footer>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+        <script src='/scripts/data.js'></script>
+        <script src='/scripts/chart.js'></script>
+        <script src='scripts/studentList.js'></script>
 </body>
 
 </html>
