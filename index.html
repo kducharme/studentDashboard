@@ -39,15 +39,14 @@
                 <span class='card'>
                     <span class='card--header'>
                         <p class='card--header-title'>Student list</p>
-                            <!-- Add search later -->
+                        <!-- Add search later -->
                     </span>
                     <span class='card--subheader'>
                         <p class='card--subheader-img'>Image</p>
                         <p class='card--subheader-student'>Student name</p>
-                        <p class='card--subheader-repo'>Repositories</p>
-                        <p class='card--subheader-streak'>Streak (days)</p>
+                        <p class='card--subheader-repo'>Repos</p>
+                        <p class='card--subheader-streak'>Streak</p>
                     </span>
-                    <hr>
                     <div id='postStudents'></div>
                 </span>
             </div>
@@ -62,6 +61,28 @@
                     <canvas id='lineChart'> </canvas>
                 </span>
 
+                <span class='right--row'>
+
+                    <!-- Pie chart for total languages -->
+                    <span class='card one'>
+                        <span class='card--header'>
+                            <p class='card--header-title'>Languages used</p>
+                        </span>
+                        <hr>
+                        <canvas class='pie-chart' style="position: relative; height:60px; width:60px" id='pieChart'> </canvas>
+                    </span>
+
+                    <span class='card two'>
+                        <span class='card--header'>
+                            <p class='card--header-title'>Total repositories</p>
+                        </span>
+                        <hr>
+                        <span id='totalRepos'></span>
+
+                    </span>
+
+                </span>
+
                 <span class='card four'>
                     <span class='card--header'>
                         <p class='card--header-title'>Commits (time of day)</p>
@@ -70,10 +91,6 @@
                     <canvas id='scatterChart'> </canvas>
                 </span>
 
-                <span class='right--row'>
-                    <span class='card one'></span>
-                    <span class='card two'></span>
-                </span>
 
             </div>
         </div>

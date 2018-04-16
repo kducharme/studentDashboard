@@ -1,11 +1,10 @@
 const lineChartOne = document.querySelector('#lineChart').getContext('2d');
 const scatterChartOne = document.querySelector('#scatterChart').getContext('2d');
-
-let ctx = document.getElementById('lineChart').getContext("2d");
-
+const pieChartOne = document.querySelector('#pieChart').getContext('2d');
+const totalRepos = document.querySelector('#totalRepos');
 
 // Chart styling
-let gradientStroke = ctx.createLinearGradient(0, 150, 0, 300);
+let gradientStroke = lineChartOne.createLinearGradient(0, 150, 0, 300);
 gradientStroke.addColorStop(0, "#C6D3FD");
 gradientStroke.addColorStop(1, "#E4EAFE");
 
@@ -60,4 +59,34 @@ let scatterChart = new Chart(scatterChartOne, {
         }
     }
 });
+
+let pieChart = new Chart(pieChartOne, {
+    type: 'doughnut',
+    data: {
+        labels: ['JavaScript', 'HTML', 'CSS'],
+        datasets: [
+            {
+                backgroundColor: ['#404E7C', '#566494', '#6373A6'],
+                data: [120, 180, 95]
+            }
+        ]
+    },
+    options: {
+        layout: {
+            padding: {
+                top: 30,
+                bottom: 30,
+                right: 30,
+                left: 30
+            }
+        },
+        legend: {
+            display: false
+        }
+    }
+})
+
+const repoChart = () => {
+
+}
 
