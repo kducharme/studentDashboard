@@ -1,11 +1,11 @@
 const lineChartOne = document.querySelector('#lineChart').getContext('2d');
 const scatterChartOne = document.querySelector('#scatterChart').getContext('2d');
-
-let ctx = document.getElementById('lineChart').getContext("2d");
-
+const pieChartOne = document.querySelector('#pieChart').getContext('2d');
+const totalRepos = document.querySelector('#totalRepos');
+const avgRepos = document.querySelector('#avgRepos');
 
 // Chart styling
-let gradientStroke = ctx.createLinearGradient(0, 150, 0, 300);
+let gradientStroke = lineChartOne.createLinearGradient(0, 150, 0, 300);
 gradientStroke.addColorStop(0, "#C6D3FD");
 gradientStroke.addColorStop(1, "#E4EAFE");
 
@@ -60,4 +60,50 @@ let scatterChart = new Chart(scatterChartOne, {
         }
     }
 });
+
+let pieChart = new Chart(pieChartOne, {
+    type: 'doughnut',
+    data: {
+        labels: ['JavaScript', 'HTML', 'CSS'],
+        datasets: [
+            {
+                backgroundColor: ['#404E7C', '#566494', '#6373A6'],
+                data: [120, 180, 95]
+            }
+        ]
+    },
+    options: {
+        layout: {
+            padding: {
+                top: 20,
+                bottom: 20,
+                right: 20,
+                left: 20
+            }
+        },
+        legend: {
+            display: false
+        }
+    }
+})
+
+const repoChart = () => {
+    const repoTotal = 542;
+    const avgData = Math.floor(repoTotal / 30);
+    const repoEl = document.createElement('p');
+    const avgEl = document.createElement('p');
+
+    repoEl.classList.add('repo')
+    repoEl.textContent = repoTotal;
+
+    avgEl.classList.add('avg')
+    avgEl.textContent = `${avgData} per student`;
+
+    totalRepos.appendChild(repoEl)
+    avgRepos.appendChild(avgEl)
+
+
+}
+
+repoChart()
 

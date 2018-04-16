@@ -43,11 +43,11 @@ const studentDataFactory = (student, studentRepos) => {
             value: null
         },
         repositories: {
-            value: Math.floor(Math.random() * 4)
+            value: Math.floor(Math.random() * 10)
                 
             },
         streak: {
-            value: Math.floor(Math.random() * 4)
+            value: Math.floor(Math.random() * 10)
                 
             }
         })
