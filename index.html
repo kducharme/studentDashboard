@@ -69,7 +69,7 @@
                             <p class='card--header-title'>Languages used</p>
                         </span>
                         <hr>
-                        <canvas class='pie-chart' style="position: relative; height:60px; width:60px" id='pieChart'> </canvas>
+                        <canvas class='pie-chart' style="position: relative; height:40px; width:40px" id='pieChart'> </canvas>
                     </span>
 
                     <span class='card two'>
@@ -77,19 +77,20 @@
                             <p class='card--header-title'>Total repositories</p>
                         </span>
                         <hr>
-                        <span id='totalRepos'></span>
-
+                        <span class='card--details'>
+                            <span id='totalRepos'></span>
+                            <span id='avgRepos'></span>
+                        </span>
                     </span>
-
                 </span>
 
-                <span class='card four'>
-                    <span class='card--header'>
-                        <p class='card--header-title'>Commits (time of day)</p>
+                    <span class='card four'>
+                        <span class='card--header'>
+                            <p class='card--header-title'>Commits (time of day)</p>
+                        </span>
+                        <hr>
+                        <canvas id='scatterChart'> </canvas>
                     </span>
-                    <hr>
-                    <canvas id='scatterChart'> </canvas>
-                </span>
 
 
             </div>

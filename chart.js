@@ -2,6 +2,7 @@ const lineChartOne = document.querySelector('#lineChart').getContext('2d');
 const scatterChartOne = document.querySelector('#scatterChart').getContext('2d');
 const pieChartOne = document.querySelector('#pieChart').getContext('2d');
 const totalRepos = document.querySelector('#totalRepos');
+const avgRepos = document.querySelector('#avgRepos');
 
 // Chart styling
 let gradientStroke = lineChartOne.createLinearGradient(0, 150, 0, 300);
@@ -74,10 +75,10 @@ let pieChart = new Chart(pieChartOne, {
     options: {
         layout: {
             padding: {
-                top: 30,
-                bottom: 30,
-                right: 30,
-                left: 30
+                top: 20,
+                bottom: 20,
+                right: 20,
+                left: 20
             }
         },
         legend: {
@@ -87,6 +88,22 @@ let pieChart = new Chart(pieChartOne, {
 })
 
 const repoChart = () => {
+    const repoTotal = 542;
+    const avgData = Math.floor(repoTotal / 30);
+    const repoEl = document.createElement('p');
+    const avgEl = document.createElement('p');
+
+    repoEl.classList.add('repo')
+    repoEl.textContent = repoTotal;
+
+    avgEl.classList.add('avg')
+    avgEl.textContent = `${avgData} per student`;
+
+    totalRepos.appendChild(repoEl)
+    avgRepos.appendChild(avgEl)
+
 
 }
+
+repoChart()
 
